@@ -27,7 +27,16 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     require 'partials/_nav.php';
 
     ?>
-    Welcome - <?php echo $_SESSION['username']; ?>
+
+
+    <div class="container my-4">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Welcome - <?php echo $_SESSION['username']; ?></h4>
+            <p>Aww yeah, you successfully Loged In As <?php echo $_SESSION['username']; ?> </p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to logout : <a href="/LoginSystem/logout.php">using this link.</a></p>
+        </div>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
